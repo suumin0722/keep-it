@@ -16,3 +16,49 @@ frontend/.env
 # 빌드 결과물 (Git에 올릴 필요 없음)
 frontend/dist/
 frontend/build/
+
+# Windows 관련
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# IntelliJ IDEA 관련
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+logs/
+log/
+.vscode/
+
+### Java (Spring Boot) 관련 ###
+# 빌드 결과물 제외 (컴파일된 클래스)
+target/
+*.class
+
+# Gradle 관련
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+gradle-app.setting
+
+# 환경 변수 및 보안 파일
+.env
+*.keystore
+*.jks
+
+# Lombok cache
+.lombok/
+
+### 기타 ###
+# 로그 파일
+*.log
+*.log.*
+
+# 특정 편집기 설정 파일
+*.swp
+*.swo
+*.swn
