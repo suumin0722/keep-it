@@ -62,3 +62,9 @@ gradle-app.setting
 *.swp
 *.swo
 *.swn
+
+# 환경 설정 파일 (보안 관련)
+backend/src/main/resources/application.properties
+backend/src/main/resources/application.yml
+backend/src/main/resources/application-*.properties
+backend/src/main/resources/application-*.yml
