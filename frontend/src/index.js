@@ -43,7 +43,6 @@ root.render(
   </Provider>,
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
+//서비스 워커는 캐시를 강하게 해서, 변경된 코드가 바로 반영 안 될 수 있음
+//개발 중엔 꺼두고(unregister), PWA로 배포할 때만 register()로 변경 추천
 serviceWorker.unregister();

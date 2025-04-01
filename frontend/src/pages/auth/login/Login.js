@@ -8,7 +8,7 @@ import Widget from "../../../components/Widget";
 import { doInit, loginUser, receiveToken } from "../../../actions/auth";
 import jwt from "jsonwebtoken";
 import s from "./Login.module.scss";
-import signInImg from "../../../images/signinImg.svg";
+import signInImg from "../../../images/signinImg.png";
 import img1 from "../../../images/Vector-1.svg";
 import img2 from "../../../images/Vector-2.svg";
 import img3 from "../../../images/Vector-3.svg";
@@ -34,8 +34,8 @@ class Login extends React.Component {
     super(props);
 
     this.state = {
-      email: "admin@flatlogic.com",
-      password: "password",
+      email: "",
+      password: "",
     };
 
     this.doLogin = this.doLogin.bind(this);
@@ -93,7 +93,7 @@ class Login extends React.Component {
     }
 
     return (
-      <div className="auth-page">
+      <div className={s.authPage}>
         <Widget
           className="widget-auth my-auto"
           title={
@@ -103,7 +103,7 @@ class Login extends React.Component {
           }
         >
           <p className="widget-auth-info">
-            Welcome Back! Please login to your account
+          환영합니다! Keep It에 로그인하고 짐 걱정 없는 하루를 시작해보세요.
           </p>
           <form className="mt" onSubmit={this.doLogin}>
             {this.props.errorMessage && (
@@ -137,10 +137,10 @@ class Login extends React.Component {
             <FormGroup className="checkbox abc-checkbox mb-4 d-flex" check>
               <Input id="checkbox1" type="checkbox" />
               <Label for="checkbox1" check className={"mr-auto"}>
-                Remember me
+                아이디 저장
               </Label>
               <Link to="forgot" className={"ml-1"}>
-                Forgot password?
+                비밀번호 찾기
               </Link>
               {/*<a href="/">Forgot password?</a>*/}
             </FormGroup>
@@ -150,7 +150,7 @@ class Login extends React.Component {
               className="auth-btn mb-3"
               size="sm"
             >
-              {this.props.isFetching ? "Loading..." : "Login"}
+              {this.props.isFetching ? "로그인중.." : "로그인"}
             </Button>
             <p className="widget-auth-info text-center">Or</p>
             <div className={"d-flex mb-4 mt-3"}>
@@ -169,25 +169,25 @@ class Login extends React.Component {
               </a>
             </div>
             <div className={"d-flex align-items-center"}>
-              Don’t have an account?{" "}
+              계정이 없으신가요?{" "}
               <Link to="register" className={"ml-1"}>
-                Sign Up here
+                회원가입하기
               </Link>
             </div>
             <footer className={s.footer}>
-              {new Date().getFullYear()} © One React - React Admin Dashboard
-              Template Made by &nbsp;
+              {new Date().getFullYear()} © Keep It.
+              {/*Template Made by &nbsp;
               <a
                 href="https://flatlogic.com"
                 rel="noopener noreferrer"
                 target="_blank"
               >
                 Flatlogic LLC
-              </a>
+              </a>*/}
             </footer>
           </form>
         </Widget>
-        <img src={signInImg} alt="signIn" className={"backImg"} />
+        {/*<img src={signInImg} alt="signIn" className={"backImg"} />*/}
       </div>
     );
   }
